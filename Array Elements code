@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a[10],i,n,sum=0;
+    int con = 0;
+
+    printf("Size of the array : ");
+    scanf("%d",&n);
+    if(n < 5)
+    {
+        printf("Array size limit is 5 to 10 only");
+    }
+    else
+    {
+
+        for(i=0; i<n; i++)
+        {
+            printf("Element %d :", con+1);
+            con++;
+            scanf("%d",&a[i]);
+        }
+
+
+        for(i=0; i<n; i++)
+        {
+            sum+=a[i];
+        }
+            printf("Sum of all array elements is : %d",sum);
+
+        return 0;
+    }
+}
