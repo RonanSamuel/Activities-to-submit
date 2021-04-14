@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int id;
+    int pin;
+    int a[3][2]={{2232,1332},{6522,2344},{3232,1232}};
+
+    printf("Enter your ID number: ");
+    scanf("%d", &id);
+    printf("Enter your pin code: ");
+    scanf("%d", &pin);
+    if(pin == 1332)
+    {
+        printf("You have succesfully logged in a not ");
+    }
+    if(pin == 2344)
+    {
+        printf("You have succesfully logged in a not ");
+    }
+    if(pin == 1232)
+    {
+        printf("You have succesfully logged in a not ");
+    }
+    else
+    {
+        printf("invalid PIN/ID");
+    }
+    return 0;
+}
