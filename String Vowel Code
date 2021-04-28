@@ -5,9 +5,9 @@
 int main() {
     char line[150];
     int i;
-    int vowels, consonant, digit, space;
+    int vowels, consonant;
 
-    vowels = consonant = digit = space = 0;
+    vowels = consonant = 0;
 
     printf("Enter a line of string: ");
     fgets(line, sizeof(line), stdin);
