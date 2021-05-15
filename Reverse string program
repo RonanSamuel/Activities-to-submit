@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+
+    char line[50];
+
+    printf("Enter a line of string: ");
+    fgets(line, sizeof(line), stdin);
+
+    // A Function to reverse any sequence in the string
+    // Starting with the pointer begin and ending with pointer end
+    void reverse(char* begin, char* end)
+    {
+        char temp;
+        while (begin < end) {
+            temp = *begin;
+            *begin++ = *end;
+            *end-- = temp;
+        }
+    }
+
+        // A Function of reversing words
+        void Words(char* line)
+        {
+            char* word_begin = line;
+
+            // Word boundary of the string
+            char* temp = line;
+
+            // Individual words are being reversed
+            while (*temp) {
+                temp++;
+                if (*temp == '\0') {
+                    reverse(word_begin, temp - 1);
+                }
+                else if (*temp == ' ') {
+                    reverse(word_begin, temp - 1);
+                    word_begin = temp + 1;
+                }
+            }
+
+        // The string is reversed
+        reverse(line, temp - 1);
+        }
+{
+
+    char* temp = line;
+    Words(line);
+    printf("\nReverse order of given string: %s \n", line);
+    return 0;
+    }
+}
