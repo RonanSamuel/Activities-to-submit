@@ -1,0 +1,59 @@
+import java.util.Collections; 
+import java.util.LinkedList;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    LinkedList<String> list = new LinkedList<String>();
+        int max = 3;
+        int min = 0;
+        int range = max - min + 1;
+        int rand1 = 0, rand2 = 0, rand3 = 0, rand4 = 0,randT = 0; 
+        
+        System.out.println("Round 1");
+        list.add("Player 1: ");
+        list.add("Player 2: ");
+        list.add("Player 3: ");
+        list.add("Player 4: ");
+        list.add("Player 5: ");
+        
+        for(int i=0; i < list.size(); i++)
+        {
+            rand1 = (int)(Math.random() * range) + min;
+            System.out.println(list.get(i) + rand1);
+        }
+        
+        System.out.println("");
+        System.out.println("Round 2");
+        for(int i=0; i < list.size(); i++)
+        {
+            rand2 = (int)(Math.random() * range) + min;
+            System.out.println(list.get(i) + rand2);
+        }
+        
+        System.out.println("");
+        System.out.println("Round 3");
+        for(int i=0; i < list.size(); i++)
+        {
+            rand3 = (int)(Math.random() * range) + min;
+            System.out.println(list.get(i) + rand3);
+        }
+        
+        System.out.println("");
+        System.out.println("Round 4");
+        for(int i=0; i < list.size(); i++)
+        {
+            rand4 = (int)(Math.random() * range) + min;
+            System.out.println(list.get(i) + rand4);
+        }
+        
+        System.out.println("");
+        System.out.println("Results");
+        for(int i=0; i < list.size(); i++)
+        {
+            randT = rand1 + rand2 + rand3 + rand4;
+            System.out.println(list.get(i) + randT);
+        }
+    }
+}
